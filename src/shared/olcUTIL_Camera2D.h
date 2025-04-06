@@ -54,7 +54,7 @@
 
 #pragma once
 
-#include "olcGeoPixel.h"
+#include "olcPixelGameEngine.h"
 
 namespace olc::utils
 {

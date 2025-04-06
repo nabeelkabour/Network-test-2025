@@ -596,7 +596,7 @@ namespace olc
 		of useful utility functions and operator overloads
 	*/
 	template<class T>
-		struct v_2d
+	struct v_2d
 	{
 		static_assert(std::is_arithmetic<T>::value, "olc::v_2d<type> must be numeric");
 
