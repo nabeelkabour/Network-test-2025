@@ -84,7 +84,9 @@
 #ifndef OLC_PGEX_TRANSFORMEDVIEW_H
 #define OLC_PGEX_TRANSFORMEDVIEW_H
 
-#include "olcGeoPixel.h"
+#include "olcPixelGameEngine.h"
+
+
 
 namespace olc
 {
