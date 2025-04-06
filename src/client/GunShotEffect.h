@@ -12,7 +12,7 @@ public:
 	float alpha = 1.f;
 
 	GunShotEffect(olc::vf2d _p1, olc::vf2d _p2, olc::Pixel _col = olc::YELLOW);
-	GunShotEffect(line<float> _line);
+	GunShotEffect(olc::utils::geom2d::line<float> _line);
 
 	//void loop(GameClient* engine) override;
 	void draw(GameClient* engine) override;

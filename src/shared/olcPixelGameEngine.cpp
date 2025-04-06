@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 
 #include "olcUTIL_Geometry2D.h"
 #define OLC_PGE_APPLICATION

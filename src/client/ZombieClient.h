@@ -17,7 +17,7 @@ public:
 	float speed = 20.f;
 	//olc::vf2d position;
 	olc::vf2d velocity = { 0.f, 0.f };
-	circle<float> collisionMask;
+	olc::utils::geom2d::circle<float> collisionMask;
 	ZombieState state = ZombieState::walking;
 	float prevDir = 0.f;
 	//float chaseTimer = 0.f;

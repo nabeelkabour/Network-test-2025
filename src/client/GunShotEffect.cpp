@@ -6,7 +6,7 @@ GunShotEffect::GunShotEffect(olc::vf2d _p1, olc::vf2d _p2, olc::Pixel _col) : p1
 	depth = 2;
 }
 
-GunShotEffect::GunShotEffect(line<float> _line)
+GunShotEffect::GunShotEffect(olc::utils::geom2d::line<float> _line)
 {
 	p1 = _line.start;
 	p2 = _line.end;

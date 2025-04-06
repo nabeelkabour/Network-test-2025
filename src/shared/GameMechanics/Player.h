@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../olcPixelGameEngine.h"
+#include "../olcGeoPixel.h"
 
 class Player
 {
@@ -13,7 +13,7 @@ public:
 	bool canShoot = true;
 	//bool canShoot = true;
 
-	circle<float> collisionMask;
+	olc::utils::geom2d::circle<float> collisionMask;
 
 	Player();
 	void loop(float fElapsedTime);

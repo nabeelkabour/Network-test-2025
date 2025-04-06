@@ -1,3 +1,4 @@
+#include "../shared/olcGeoPixel.h"
 #include "Blood.h"
 #include "../shared/Resources.h"
 #include "GameClient.h"
@@ -10,7 +11,7 @@ BloodShotEffect::BloodShotEffect(olc::vf2d pos, float dir) //direction(dir)
 		position[i] = pos;
 
 		float mag = rand() % 100 + 50.f;
-		float dirV = rand() % 360 * (pi / 180.f);
+		float dirV = rand() % 360 * (olc::utils::geom2d::pi / 180.f);
 
 		velocity[i].x = mag;
 		velocity[i].y = dirV;

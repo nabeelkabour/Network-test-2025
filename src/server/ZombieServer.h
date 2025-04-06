@@ -19,7 +19,7 @@ public:
 	float hp = 100.f;
 	ZombieState	state = ZombieState::walking;
 	float speed = 20.f, direction = 0.f;
-	circle<float> collisionMask;
+	olc::utils::geom2d::circle<float> collisionMask;
 	float chaseTimer = 0.f;
 	float chaseInterval = 0.5f;
 	olc::Pixel skinColor, clothesColor;

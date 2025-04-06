@@ -177,7 +177,7 @@ void Server::receive(GameServer* game)
 				client.packetRx >> toX >> toY;
 
 				olc::vf2d start = { fromX, fromY };
-				line<float> lineCast(start, { toX, toY });
+				olc::utils::geom2d::line<float> lineCast(start, { toX, toY });
 
 				for (ZombieServer* z : game->zombieList)
 				{

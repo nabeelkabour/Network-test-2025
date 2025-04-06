@@ -15,7 +15,7 @@ public:
 	float recoilStrength = 5.f;
 	float headAngleOffset = 0.f;
 	bool canShoot = true;
-	circle<float> collisionMask;
+	olc::utils::geom2d::circle<float> collisionMask;
 	
 
 	PlayerClient(olc::vf2d pos = { 0.f, 0.f });
