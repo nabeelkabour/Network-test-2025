@@ -1,9 +1,7 @@
 #pragma once
 
-#define OLC_PGEX_TRANSFORMEDVIEW
 #include "../shared/olcGeoPixel.h"
 #include "../shared/olcUTIL_Camera2D.h"
-#include "../shared/olcPGEX_TransformedView.h"	
 //#include "Drawable.h"
 //#include "ObjectClient.h"
 #include "Client.h"

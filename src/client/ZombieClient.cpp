@@ -116,7 +116,7 @@ ZombieBodyPart::ZombieBodyPart(olc::vf2d pos, olc::Decal* spr, olc::Pixel c) :
 	position(pos),
 	color(c)
 {
-	dir = (rand() % 360) * pi / 180.f;
+	dir = (rand() % 360) * olc::utils::geom2d::pi / 180.f;
 	speed = rand() % 10 + 10;
 	//lifeInterval = (rand() % 50 + 25.f) / 100.f;
 

@@ -57,7 +57,7 @@ void PlayerClient::draw(GameClient* engine)
         olc::vf2d offset = { 0.f, 0.f };
         if (index == Pieces::sleeves || index == Pieces::weapon || index == Pieces::arms)
         {
-            offset = { recoil, float(direction + pi) };
+            offset = { recoil, float(direction + olc::utils::geom2d::pi) };
         }
 
         float headAngle = 0.f;
@@ -68,7 +68,7 @@ void PlayerClient::draw(GameClient* engine)
         if (index == Pieces::head || index == Pieces::headAccess)
         {
             headAngleOffset += 0.5f * engine->GetElapsedTime();
-            headAngle = pi / 16.f * sin(headAngleOffset) + pi / 8.f;//rand() % 180) * (pi / 180.f);
+            headAngle = olc::utils::geom2d::pi / 16.f * sin(headAngleOffset) + olc::utils::geom2d::pi / 8.f;//rand() % 180) * (pi / 180.f);
 
             //pivot = { 65.f, 60.f };
         }

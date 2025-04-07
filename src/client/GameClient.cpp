@@ -1,4 +1,5 @@
 #include "../shared/olcGeoPixel.h"
+#include "../shared/olcUTIL_Camera2D.h"
 #include "GameClient.h"
 #include "../shared/Resources.h"
 #include "ZombieClient.h"
@@ -9,6 +10,8 @@
 
 #define and &&
 #define or ||
+
+//using namespace olc::utils;
 
 GameClient::GameClient()
 {
@@ -64,7 +67,7 @@ bool GameClient::OnUserUpdate(float fElapsedTime)
 		olc::vf2d startPoint = cPlayer.position + olc::vf2d{ 64.f, cPlayer.direction }.cart();
 		olc::vf2d endPoint = startPoint + olc::vf2d{ 400.f, cPlayer.direction }.cart();
 		//olc::vf2d endPoint = { float(GetMouseX()), float(GetMouseY()) };
-		line<float> lineCast(startPoint, endPoint);
+		olc::utils::geom2d::line<float> lineCast(startPoint, endPoint);
 
 		//DrawLineDecal(startPoint, endPoint);
 
@@ -89,7 +92,7 @@ bool GameClient::OnUserUpdate(float fElapsedTime)
 
 		for (ZombieClient* z : zombies.instances)
 		{
-			auto& bloodPoints = intersects(lineCast, z->collisionMask);
+			auto& bloodPoints = olc::utils::geom2d::intersects(lineCast, z->collisionMask);
 
 			for (auto& p : bloodPoints)
 			{
@@ -115,7 +118,7 @@ bool GameClient::OnUserUpdate(float fElapsedTime)
 	timerSyncRot += fElapsedTime;
 	static float prevDir = 0.f;
 
-	if (abs(prevDir - client.player.direction) >= (pi / 24.f) and timerSyncRot >= (1.f / 30.f))
+	if (abs(prevDir - client.player.direction) >= (olc::utils::geom2d::pi / 24.f) and timerSyncRot >= (1.f / 30.f))
 	{
 		sf::Packet packetTx;
 

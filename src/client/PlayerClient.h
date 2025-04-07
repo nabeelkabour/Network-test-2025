@@ -15,6 +15,7 @@ public:
 	float recoilStrength = 5.f;
 	float headAngleOffset = 0.f;
 	bool canShoot = true;
+
 	olc::utils::geom2d::circle<float> collisionMask;
 	
 

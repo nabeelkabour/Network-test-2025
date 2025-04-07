@@ -123,7 +123,7 @@ void Client::update(GameClient* game)
             //Shooter recoil animation
             otherClients[shooterId].player.recoil = otherClients[shooterId].player.recoilStrength;
 
-            line<float> shotCast = { { fromX, fromY }, { toX, toY } };
+            olc::utils::geom2d::line<float> shotCast = { { fromX, fromY }, { toX, toY } };
             game->drawList.push_back(new GunShotEffect(shotCast));
 
             //auto& points = intersects(shotCast, player.collisionMask);
