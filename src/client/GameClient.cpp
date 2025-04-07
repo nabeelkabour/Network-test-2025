@@ -1,4 +1,5 @@
 #include "../shared/olcGeoPixel.h"
+#include "../shared/olcPGEX_TransformedView.h"
 #include "../shared/olcUTIL_Camera2D.h"
 #include "GameClient.h"
 #include "../shared/Resources.h"
